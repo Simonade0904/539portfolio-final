@@ -4,19 +4,12 @@ let tablet = window.matchMedia("(min-width = 768px)");
 
 menu_icon.addEventListener("click", function() {
     console.log(menu.style.display);
-    if (menu.style.display === 'none' || menu.style.display === '') {
+    if (menu.style.display === '') {
         menu.style.display = 'block';
     }
 
     else{
-        menu.style.display = 'none';
+        menu.style.display = '';
     }
 });
 
-function tablet_menu(tablet){
-    if (tablet.matches){
-        menu.stle.display = "block";
-    }
-}
-
-tablet.addEventListener(tablet,tablet_menu);
