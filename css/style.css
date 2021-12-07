@@ -212,6 +212,10 @@ li > p{
     margin-top: 24px;
 }
 
+.case-summary > img{
+    border: 2px solid #20627E;
+}
+
 .case-property{
     text-decoration: underline;
     font-weight: 700;
@@ -305,10 +309,64 @@ li > p{
     top: 30%;
 }
 
+/* Contact Form CSS Styling*/
 
-@media screen and (prefers-reduced-motion: reduced){
-    .skip-key{
+.contact-form{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.form-item{
+    padding: 8px;
+    margin: 8px;
+}
+
+.form-item > label{
+    font-family: "Cabin", "Arial", sans-serif;
+    font-size: 1rem;
+    color: #20627E;
+}
+
+.form-item > input{
+    height: 30px;
+}
+
+.form-item:nth-child(4){
+    width: 100%;
+}
+
+#msg{
+    margin-top: 8px;
+    width: 100%;
+    height: 300px;
+}
+
+.line-break{
+    width: 100%;
+}
+
+.contact-form > button{
+    width: auto;
+    height: auto;
+    margin-left: 16px;
+    padding: 4px 16px 4px 16px;
+    font-size: 1.2rem;
+    background-color: #FFFFFF;
+    color: #20627E;
+    border: 2px solid #20627E;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    .skip-key, .flip-card-outer .flip-card-inner{
         animation: none;
+        transition: none;
+        -webkit-transition: none;
+    }
+
+    .parallax-box{
+        background-attachment: local;
     }
 }
 
@@ -445,18 +503,15 @@ li > p{
     .my-initials{
         margin-left: 10%;
     }
+    
+    .case-studies-gallery, .page-gallery{
+        grid-template-columns: 23% 23% 23%;
+        column-gap: 24px;
+        margin-top: 36px;
+    }
 }
 
 @media screen and (min-width: 1500px) {
-    /* hr{
-        max-width: 1300px;
-        margin: 8px auto 8px auto;
-    }
-    
-    .content-box .case-summary{
-        max-width: 1100px;
-        margin: auto;
-    } */
 
     main{
         max-width: 1500px;
